@@ -8,11 +8,9 @@ phases:
     commands:
       - echo "Granting execution permission to deployment script"
       - chmod +x scripts/restart_httpd.sh
+
 artifacts:
   files:
     - '**/*'
-    - '!README.md'        # 可选：忽略不必要的文件
-    - '!**/.gitignore'    # 忽略 Git 文件
-
-
-
+    - '!README.md'
+    - '!**/.gitignore'
