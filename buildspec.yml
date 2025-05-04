@@ -3,14 +3,16 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Install phase: nothing needed"
-      - chmod +x scripts/restart_httpd.sh
+      - echo "Install phase: no dependencies needed"
   build:
     commands:
-      - echo "Build phase: no build needed for static HTML"
+      - echo "Granting execution permission to deployment script"
+      - chmod +x scripts/restart_httpd.sh
 artifacts:
   files:
     - '**/*'
     - '!README.md'        # 可选：忽略不必要的文件
     - '!**/.gitignore'    # 忽略 Git 文件
+
+
 
